@@ -96,7 +96,8 @@ test_that("test that rates don't move `too much' day-over-day", {
     
   rates.2 <- rates[rates$date == sample.date.next & rates$currency == "EUR" & 
                        rates$expiry == "20Y", ]$rate
-    
-  expect_true(abs(rates.2-rates.1)/rates.1 < 0.1)
+  
+  # On 2015/6/3, diff is indeed 0.135 (this is max diff, followed by 0.126, etc.)
+  expect_true(abs(rates.2-rates.1)/rates.1 < 0.15)
 })
 

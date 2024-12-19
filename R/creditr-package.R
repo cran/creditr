@@ -1,6 +1,6 @@
 #' The creditr package.
 #' 
-#' \code{creditr} package provides useful tools for pricing credit default swaps
+#' \code{creditr} package prices credit default swaps
 #' (CDS). It enables CDS class object which has slots as name, contract, RED, 
 #' date, spread, maturity, teno, coupon, recovery, currency, notional, 
 #' principal, accrual, pd, price, upfront, spread.DV01, IR.DV01 and rec.risk.01,
@@ -17,10 +17,9 @@
 #' relevant interest rates from online sources. Thanks to ISDA Standard Model's 
 #' Open Source license, we are able to create this package for R users. You can 
 #' find the Open Source licence of ISDA Standard Model at 
-#' "http://www.cdsmodel.com/cdsmodel/cds-disclaimer.html?"
+#' "https://www.cdsmodel.com/cdsmodel/cds-disclaimer.html"
 #' 
 #' @name creditr
-#' @docType package
 #'   
 #' @useDynLib creditr
 #'   
@@ -37,4 +36,4 @@
 #' @import RCurl
 #' @import XML
 #' @import xts
-NULL
+"_PACKAGE"

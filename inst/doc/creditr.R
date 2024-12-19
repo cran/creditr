@@ -1,8 +1,7 @@
 ### R code from vignette source 'creditr.Rnw'
-### Encoding: ISO8859-1
 
 ###################################################
-### code chunk number 1: creditr.Rnw:1057-1065
+### code chunk number 1: creditr.Rnw:1090-1098
 ###################################################
 library(creditr)
 cds1 <- CDS(name     = "Alcoa",
@@ -15,7 +14,7 @@ cds1 <- CDS(name     = "Alcoa",
 
 
 ###################################################
-### code chunk number 2: creditr.Rnw:1070-1073
+### code chunk number 2: creditr.Rnw:1103-1106
 ###################################################
 cds2 <- CDS(date     = as.Date("2014-06-24"),
             maturity = as.Date("2019-06-20"),
@@ -23,19 +22,19 @@ cds2 <- CDS(date     = as.Date("2014-06-24"),
 
 
 ###################################################
-### code chunk number 3: creditr.Rnw:1084-1085
+### code chunk number 3: creditr.Rnw:1111-1112
 ###################################################
 summary(cds1)
 
 
 ###################################################
-### code chunk number 4: creditr.Rnw:1099-1100
+### code chunk number 4: creditr.Rnw:1125-1126
 ###################################################
 cds1
 
 
 ###################################################
-### code chunk number 5: creditr.Rnw:1111-1120
+### code chunk number 5: creditr.Rnw:1139-1148
 ###################################################
 x <- data.frame(date = as.Date(c("2014-04-22", "2014-04-22")),
                 currency = c("USD", "EUR"),
@@ -49,19 +48,19 @@ CS10(x)
 
 
 ###################################################
-### code chunk number 6: creditr.Rnw:1128-1129
+### code chunk number 6: creditr.Rnw:1156-1157
 ###################################################
 cds1.rates <- get_rates(date = as.Date("2014-06-24"), currency = "USD")
 
 
 ###################################################
-### code chunk number 7: creditr.Rnw:1134-1135
+### code chunk number 7: creditr.Rnw:1162-1163
 ###################################################
 cds1.rates
 
 
 ###################################################
-### code chunk number 8: creditr.Rnw:1151-1158
+### code chunk number 8: creditr.Rnw:1178-1185
 ###################################################
 rec_risk_01(data.frame(date     = as.Date("2014-06-24"),
                        currency = "USD",
@@ -73,7 +72,7 @@ rec_risk_01(data.frame(date     = as.Date("2014-06-24"),
 
 
 ###################################################
-### code chunk number 9: creditr.Rnw:1172-1179
+### code chunk number 9: creditr.Rnw:1199-1206
 ###################################################
 IR_DV01(data.frame(date     = as.Date("2014-04-22"),
                    currency = "USD",
@@ -85,7 +84,7 @@ IR_DV01(data.frame(date     = as.Date("2014-04-22"),
 
 
 ###################################################
-### code chunk number 10: creditr.Rnw:1195-1202
+### code chunk number 10: creditr.Rnw:1222-1229
 ###################################################
 spread_DV01(data.frame(date     = as.Date("2014-04-22"),
                        currency = "USD",
@@ -97,7 +96,7 @@ spread_DV01(data.frame(date     = as.Date("2014-04-22"),
 
 
 ###################################################
-### code chunk number 11: creditr.Rnw:1216-1221
+### code chunk number 11: creditr.Rnw:1243-1248
 ###################################################
 spread_to_pd(data.frame(date     = Sys.Date(),
                         spread   = 160,

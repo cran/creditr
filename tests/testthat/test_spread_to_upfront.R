@@ -1,17 +1,17 @@
 context("Test spread_to_upfront")
 
 ## Test. In the following test cases we compare the results of 
-## our upront functions for different data with results from markit.com using
+## our upront functions for different data with results from https://www.spglobal.com/en using
 ## the same data
 
 test_that("test for spread_to_upfront", {
   
-  ## test case to see if our function gives the same result as markit.com
+  ## test case to see if our function gives the same result as https://www.spglobal.com/en
   ## all cases use data from Xerox Corporation for 2014-04-22. 
   
   load("test_spread_to_upfront.RData")
   
-  ## actual upfront value from markit.com for Xerox Corporation for 2014-04-22.
+  ## actual upfront value from https://www.spglobal.com/en for Xerox Corporation for 2014-04-22.
   
   ## truth.1 <- 18624
   
@@ -30,11 +30,11 @@ test_that("test for spread_to_upfront", {
   expect_that(round(result.1), equals(round(truth.1)))
   
   ## In the following test cases we want to check if the result of changing
-  ## certain variables is the same as the results from markit.com results.
+  ## certain variables is the same as the results from https://www.spglobal.com/en results.
   
   ## test case where spread is equal to the coupon 
   
-  ## markit.com value
+  ## https://www.spglobal.com/en value
   ## truth.2 <- -9444
   ## calculated value
   

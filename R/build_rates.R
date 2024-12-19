@@ -38,8 +38,8 @@
 #' 
 #' @seealso \link{download_markit} \link{download_FRED} \link{rates}
 #'   
-#' @references \url{http://www.markit.com/} 
-#'   \url{http://research.stlouisfed.org/fred2/categories/33003/downloaddata}
+#' @references \url{https://www.spglobal.com/en} 
+#'   \url{https://fred.stlouisfed.org/docs/api/fred/}
 #'   
 #' @examples
 #' \dontrun{

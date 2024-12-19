@@ -87,14 +87,14 @@ int JpmcdsContingentLegPV
     REQUIRE (spreadCurve != NULL);
     REQUIRE (pv != NULL);
     
-    if (!JpmcdsZeroPrice(spreadCurve, cl->endDate) > JPMCDS_LOG0_THRESHOLD) 
+    if ((!JpmcdsZeroPrice(spreadCurve, cl->endDate)) > JPMCDS_LOG0_THRESHOLD) 
     {
         JpmcdsErrMsg("%s: Default hazard rate is not defined at maturity %s!", 
                 routine, JpmcdsFormatDate(cl->endDate));
         goto done;
     }
     
-    if (!JpmcdsZeroPrice(discountCurve, cl->endDate) > JPMCDS_LOG0_THRESHOLD)
+    if ((!JpmcdsZeroPrice(discountCurve, cl->endDate)) > JPMCDS_LOG0_THRESHOLD)
     {
         JpmcdsErrMsg("%s: Zero discount rate is not defined at maturity %s!", 
                 routine, JpmcdsFormatDate(cl->endDate));

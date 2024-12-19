@@ -98,14 +98,14 @@ int JpmcdsFeeLegPV
         TDate startDate = fl->accStartDates[0];
         TDate endDate   = fl->accEndDates[fl->nbDates-1];
         
-        if (!JpmcdsZeroPrice(spreadCurve, endDate) > JPMCDS_LOG0_THRESHOLD) 
+        if ((!JpmcdsZeroPrice(spreadCurve, endDate)) > JPMCDS_LOG0_THRESHOLD) 
         {
             JpmcdsErrMsg("%s: Default hazard rate is not defined at maturity %s!", 
                     routine, JpmcdsFormatDate(endDate));
             goto done;
         }
 
-        if (!JpmcdsZeroPrice(discCurve, endDate) > JPMCDS_LOG0_THRESHOLD)
+        if ((!JpmcdsZeroPrice(discCurve, endDate)) > JPMCDS_LOG0_THRESHOLD)
         {
             JpmcdsErrMsg("%s: Zero discount rate is not defined at maturity %s!",
                     routine, JpmcdsFormatDate(endDate));

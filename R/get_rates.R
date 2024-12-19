@@ -15,9 +15,7 @@
 #' @return a data frame that contains date (the CDS pricing date), 
 #'   
 #' @examples
-#' \dontrun{
 #' get_rates(as.Date("2014-05-07"), currency = "USD")
-#' }
 
 get_rates <- function(date, currency){
   

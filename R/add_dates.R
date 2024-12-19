@@ -17,9 +17,9 @@
 #'   baseDate (the starting date for the IR curve)
 #'   
 #' @references 
-#' \url{http://www.cdsmodel.com/cdsmodel/assets/cds-model/docs/c-code%20Key%20Functions-v1.pdf
+#' \url{https://www.cdsmodel.com/cdsmodel/assets/cds-model/docs/c-code%20Key%20Functions-v1.pdf
 #' } 
-#' \url{http://www.cdsmodel.com/assets/cds-model/docs/Standard%20CDS%20Examples.pdf
+#' \url{https://www.cdsmodel.com/assets/cds-model/docs/Standard%20CDS%20Examples.pdf
 #' }
 #' 
 #' @examples

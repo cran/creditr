@@ -296,7 +296,7 @@ conv: switch (c) {
                 x = va_arg(arg, double);
                 if (!F.havePrecision)
                     F.precision = JPMCDS_DEF_PRECISION;
-                sprintf(buf2, "%.*f", F.precision, x);
+                snprintf(buf2, 512, "%.*f", F.precision, x);
                 goto floating;
 
                 /*  floating-point  */
@@ -307,9 +307,9 @@ conv: switch (c) {
                 if (!F.havePrecision)
                     F.precision = 6;
                 if (c == 'e')
-                    sprintf(buf2, "%.*e", F.precision, x);
+                    snprintf(buf2, 512, "%.*e", F.precision, x);
                 else
-                    sprintf(buf2, "%.*E", F.precision, x);
+                    snprintf(buf2, 512, "%.*E", F.precision, x);
                 goto floating;
                 
                 /*  "general" notation  */
@@ -323,9 +323,9 @@ conv: switch (c) {
                     F.precision = 1;
                 F.exponent = (char)(c - 2);
                 if (c == 'g')
-                    sprintf(buf2, "%.*g", F.precision, x);
+                    snprintf(buf2, 512, "%.*g", F.precision, x);
                 else
-                    sprintf(buf2, "%.*G", F.precision, x);
+                    snprintf(buf2, 512, "%.*G", F.precision, x);
                 goto floating;
                 
                     /*  floating (common code)  */
@@ -333,7 +333,14 @@ conv: switch (c) {
             floating:
                 i = strlen(buf2);
                 s -= i;
+                
+                if (i > sizeof(s) - 1) {
+                  i = sizeof(s) - 1;
+                }
+                
                 strncpy(s, buf2, i);
+                s[i] = '\0';
+                
                 break;
 
                 /*  character  */

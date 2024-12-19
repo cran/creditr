@@ -18,7 +18,7 @@
 #' @slot accrual is the accrued interest payment.
 #' @slot pd is the approximate the default probability at time t given the
 #'   \code{spread}.
-#' @slot price
+#' @slot price is the price
 #' @slot upfront is quoted in the currency amount. Since a standard contract is
 #'   traded with fixed coupons, upfront payment is introduced to reconcile the
 #'   difference in contract value due to the difference between the fixed coupon

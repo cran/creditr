@@ -13,8 +13,8 @@
 #'   \code{9Y} \code{10Y} \code{12Y} \code{15Y} \code{20Y} \code{30Y} \item rate
 #'   = a numeric vector. The LIBOR rate. }
 #' @details The source of the interest rates in \code{rates.RData} is from 
-#'   \url{https://www.markit.com/} and 
-#'   \url{http://research.stlouisfed.org/fred2/}. When a user is calculating CDS
+#'   \url{https://www.spglobal.com/en} and 
+#'   \url{https://fred.stlouisfed.org/}. When a user is calculating CDS
 #'   using the \code{CDS} package, the package calls \code{get_rates} to get the
 #'   needed interest rates; \code{get_rates} then calls the \code{rates.RData} 
 #'   for these interest rates. If a date is unavailable in \code{rates.RData}, 
@@ -69,8 +69,8 @@
 #'   Markit and FRED. Users, however, should be aware of that some data seem 
 #'   "missing".
 #'   
-#' @source \url{https://www.markit.com/} 
-#'   \url{http://research.stlouisfed.org/fred2/}
+#' @source \url{https://www.spglobal.com/en} 
+#'   \url{https://fred.stlouisfed.org/}
 #'   
 #' @examples 
 #' data(rates)
@@ -83,7 +83,8 @@
 #' 
 #' @docType data
 #' @name rates
-#' @keywords datasets, interest rates
+#' @keywords datasets
+#' @keywords interest rates
 #' @seealso \code{\link{download_FRED}} \code{\link{download_markit}}
 #'   \code{\link{build_rates}}
 NULL
